@@ -1,4 +1,7 @@
 
+package contracts;
+
+
 org.springframework.cloud.contract.spec.Contract.make {
 	description("""
 Represents a successful scenario of getting a contract
