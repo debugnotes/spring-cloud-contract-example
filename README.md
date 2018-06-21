@@ -1,4 +1,4 @@
-#How to Setup Spring Cloud Contract (Basic Configuration)
+# How to Setup Spring Cloud Contract (Basic Configuration)
 
 Consumer Driven Contract testing allows a developer to create automated tests for 
 communications between a network client (re: consumer) application and the remote 
@@ -22,9 +22,10 @@ those contracts in consumer afterward.
 The producer project must be successfully execute the "install" phase before the 
 consumer project will be able to see the contracts available for a producer (see below).
 
-##Producer Configuration
+## Producer Configuration
 
-###1.      Add Spring Cloud Contracts verifier dependency to the pom.xml in the producer project.
+### 1.      Add Spring Cloud Contracts verifier dependency to the pom.xml in the producer project.
+
 
 To enable support for spring contracts in the producer, the dependency 
 spring-cloud-starter-contract-verifier must be added to the producer's pom.xml, 
@@ -45,7 +46,9 @@ that is generated during the install phase of building a producer application's 
 ```
 
 
-###2. Add Spring Cloud Contract verifier base class to producer's test configuration.
+
+### 2. Add Spring Cloud Contract verifier base class to producer's test configuration.
+
 
 When the producer's test are run, the Spring Cloud Contract verifier reads the groovy scripts located in 
 source at /src/test/resources/contracts/* and then generates the actual Java test code (re: classes with java code, 
@@ -132,9 +135,8 @@ return a 404 error on the consumer when contracts are testing.
 
 
 
- 
 
-###4. Write one or more Spring Cloud Contract files (groovy scripts) as tests for the producer's api, and put them in the /src/test/resources/contracts/ folder on the server.
+### 4. Write one or more Spring Cloud Contract files (groovy scripts) as tests for the producer's api, and put them in the /src/test/resources/contracts/ folder on the server.
 
 The contracts (as groovy scripts) themselves contain a description of the stubs and the expected
 behavior of a stubbed producer based on the configuration of the RESTful call.
@@ -243,7 +245,8 @@ public class ContractVerifierTest extends ContractVerifierBase {
 }
 
 ```
-###5. Run the install phase of the producer's project and ensure that a -stubs.jar file is created and installed to your local maven repository.
+
+### 5. Run the install phase of the producer's project and ensure that a -stubs.jar file is created and installed to your local maven repository.
 
 When the setup is correct, there should be two (2) jar files in the target folder of the application 
 after running the install phase: the application's own .jar file, as expected, and then a second 
@@ -255,10 +258,9 @@ your local maven repo to share the stubs it creates for a producer.
 
 ![README-2.png](README-2.png)
 
-##Consumer Configuration
+## Consumer Configuration
 
-###6. Add Spring Cloud Contracts stub runner dependency to the pom.xml in the consumer project.
-
+### 6. Add Spring Cloud Contracts stub runner dependency to the pom.xml in the consumer project.
 After adding the spring-cloud-starter-contract-stub-runner dependency to the project's pom.xml file, 
 a test class can be created that allows it to use dependency injection (re: @Autowire annotations) 
 to connect to the stubs via MockMvc. @Test(s) can then be written using the injected variable to 
@@ -273,8 +275,7 @@ mock the producer during testing of the consumer.
     </dependency>
 </dependencies>
 ```
-
-###7. Create test classes with stub runner annotations to allow testing of the producer's endpoints.
+### 7. Create test classes with stub runner annotations to allow testing of the producer's endpoints.
 
 Configuring the consumer can be a bit tricky because the stubs of the producer are referenced by 
 package name in the consumer, which assumes that they are already installed. When stubsmode is 
@@ -337,8 +338,7 @@ public class DefaultControllerTest {
 
 }
 ```
-
-##Notes
+## Notes
 
 A consumer driven contract is meant to be defined/written by the developer of the consumer's tests, which 
 then is given to the developer of the producer, who is then tasked with writing the necessary 
@@ -352,4 +352,3 @@ tests for microservices architectures much easier.
 
 To understand how to write a Groovy Contract, follow the same methodology as cucumber tests 
 (see: https://docs.cucumber.io).
-
