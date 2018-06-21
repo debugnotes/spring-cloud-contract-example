@@ -26,6 +26,7 @@ consumer project will be able to see the contracts available for a producer (see
 
 ### 1.      Add Spring Cloud Contracts verifier dependency to the pom.xml in the producer project.
 
+
 To enable support for spring contracts in the producer, the dependency 
 spring-cloud-starter-contract-verifier must be added to the producer's pom.xml, 
 plus other management dependencies.
@@ -45,7 +46,9 @@ that is generated during the install phase of building a producer application's 
 ```
 
 
+
 ### 2. Add Spring Cloud Contract verifier base class to producer's test configuration.
+
 
 When the producer's test are run, the Spring Cloud Contract verifier reads the groovy scripts located in 
 source at /src/test/resources/contracts/* and then generates the actual Java test code (re: classes with java code, 
@@ -132,7 +135,6 @@ return a 404 error on the consumer when contracts are testing.
 
 
 
- 
 
 ### 4. Write one or more Spring Cloud Contract files (groovy scripts) as tests for the producer's api, and put them in the /src/test/resources/contracts/ folder on the server.
 
@@ -243,6 +245,7 @@ public class ContractVerifierTest extends ContractVerifierBase {
 }
 
 ```
+
 ### 5. Run the install phase of the producer's project and ensure that a -stubs.jar file is created and installed to your local maven repository.
 
 When the setup is correct, there should be two (2) jar files in the target folder of the application 
@@ -258,7 +261,6 @@ your local maven repo to share the stubs it creates for a producer.
 ## Consumer Configuration
 
 ### 6. Add Spring Cloud Contracts stub runner dependency to the pom.xml in the consumer project.
-
 After adding the spring-cloud-starter-contract-stub-runner dependency to the project's pom.xml file, 
 a test class can be created that allows it to use dependency injection (re: @Autowire annotations) 
 to connect to the stubs via MockMvc. @Test(s) can then be written using the injected variable to 
@@ -273,7 +275,6 @@ mock the producer during testing of the consumer.
     </dependency>
 </dependencies>
 ```
-
 ### 7. Create test classes with stub runner annotations to allow testing of the producer's endpoints.
 
 Configuring the consumer can be a bit tricky because the stubs of the producer are referenced by 
@@ -337,7 +338,6 @@ public class DefaultControllerTest {
 
 }
 ```
-
 ## Notes
 
 A consumer driven contract is meant to be defined/written by the developer of the consumer's tests, which 
