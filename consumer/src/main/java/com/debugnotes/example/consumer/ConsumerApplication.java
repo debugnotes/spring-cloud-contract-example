@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.consumer;
+package com.debugnotes.example.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.consumer.controller;
+package com.debugnotes.example.consumer.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

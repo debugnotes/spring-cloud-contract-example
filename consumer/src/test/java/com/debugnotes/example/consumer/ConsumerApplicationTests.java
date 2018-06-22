@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.consumer;
+package com.debugnotes.example.consumer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
