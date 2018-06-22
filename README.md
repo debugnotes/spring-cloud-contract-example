@@ -183,7 +183,7 @@ then:
 
 ```
 
-package com.debugnotes.example.contract.producer;
+package com.debugnotes.example.producer;
 
 
 import ContractVerifierBase;
