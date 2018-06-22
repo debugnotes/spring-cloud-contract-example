@@ -75,7 +75,7 @@ the stubs and is typically used to specify the mocking server's context for each
             <extensions>true</extensions>
             <configuration>
                 <baseClassForTests>ContractVerifierBase</baseClassForTests>
-                <!--<packageWithBaseClasses>com.debugnotes.example.contract.producer</packageWithBaseClasses>-->
+                <!--<packageWithBaseClasses>com.debugnotes.example.producer</packageWithBaseClasses>-->
             </configuration>
         </plugin>
     </plugins>
@@ -83,7 +83,7 @@ the stubs and is typically used to specify the mocking server's context for each
 ```
 
 ```
-package com.debugnotes.example.contract.producer;
+package com.debugnotes.example.producer;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
@@ -111,7 +111,7 @@ public abstract class ContractVerifierBase {
 ![README-1.png](README-1.png)
 
 
-###3. Ensure all controllers to be mocked have their endpoints include the correct "producer" properties:
+### 3. Ensure all controllers to be mocked have their endpoints include the correct "producer" properties:
 
  
 ```
@@ -286,9 +286,9 @@ local repository, anytime a Contract's groovy file changes, the producer applica
 visible to consumer applications.
 
 ```
-package com.debugnotes.example.contract.consumer.controller;
+package com.debugnotes.example.consumer.controller;
 
-import com.debugnotes.example.contract.consumer.ConsumerApplication;
+import com.debugnotes.example.consumer.ConsumerApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
