@@ -20,5 +20,4 @@ public abstract class ContractVerifierBase {
         RestAssuredMockMvc.webAppContextSetup(webApplicationContext);       // mocks all controllers
         // RestAssuredMockMvc.standaloneSetup(new ServerDefaultController());  // mocks specific controller
     }
-
 }
