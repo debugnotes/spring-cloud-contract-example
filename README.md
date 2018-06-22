@@ -185,7 +185,9 @@ then:
 
 package com.debugnotes.example.contract.producer;
 
+
 import ContractVerifierBase;
+
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import io.restassured.module.mockmvc.specification.MockMvcRequestSpecification;
@@ -286,9 +288,11 @@ local repository, anytime a Contract's groovy file changes, the producer applica
 visible to consumer applications.
 
 ```
+
 package com.debugnotes.example.consumer.controller;
 
 import com.debugnotes.example.consumer.ConsumerApplication;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
