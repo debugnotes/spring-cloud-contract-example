@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.producer.model;
+package com.debugnotes.example.producer.model;
 
 public class ProfileData {
 

@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.producer;
+package com.debugnotes.example.producer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -74,7 +74,7 @@ the stubs and is typically used to specify the mocking server's context for each
             <version>${spring-cloud-contract-maven-plugin.version}</version>
             <extensions>true</extensions>
             <configuration>
-                <baseClassForTests>com.debugnotes.example.contract.producer.ContractVerifierBase</baseClassForTests>
+                <baseClassForTests>ContractVerifierBase</baseClassForTests>
                 <!--<packageWithBaseClasses>com.debugnotes.example.contract.producer</packageWithBaseClasses>-->
             </configuration>
         </plugin>
@@ -185,7 +185,7 @@ then:
 
 package com.debugnotes.example.contract.producer;
 
-import com.debugnotes.example.contract.producer.ContractVerifierBase;
+import ContractVerifierBase;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import io.restassured.module.mockmvc.specification.MockMvcRequestSpecification;

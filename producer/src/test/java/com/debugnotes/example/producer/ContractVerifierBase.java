@@ -1,4 +1,4 @@
-package com.debugnotes.example.contract.producer;
+package com.debugnotes.example.producer;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
